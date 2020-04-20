@@ -5,6 +5,7 @@
 #' @param hc hclust object
 #' @param k number of clusters to cut dendrogram
 #' @return object \code{dendro} from ggdendro, with cluster assignments added
+#' @export
 dendro_data_k <- function(hc, k) {
 
   hcdata    <-  ggdendro::dendro_data(hc, type = "rectangle")
@@ -36,7 +37,10 @@ dendro_data_k <- function(hc, k) {
 #'
 #' set parameters of labels for plotting customized dendrogram.
 #' following \link{https://atrebas.github.io/post/2019-06-08-lightweight-dendrograms/}
-
+#' @param nbLabels number of labels
+#' @param direction label alignment (hjust and vjust). Must be one of "tb", "bt", "lr", "rl"
+#' @param fan logical. default FALSE. Should dendrogram labels be fanned out
+#' @export
 set_labels_params <- function(nbLabels,
                               direction = c("tb", "bt", "lr", "rl"),
                               fan       = FALSE) {
@@ -59,6 +63,18 @@ set_labels_params <- function(nbLabels,
 #'
 #' use ggplot to make customized dendrogram.
 #' following \link{https://atrebas.github.io/post/2019-06-08-lightweight-dendrograms/}
+#' @param hcdata dendro object
+#' @param metadata dataframe with metdata
+#' @param direction direction of dendrogram
+#' @param fan spread dendrogram label as fan
+#' @param branch.size branch size, default 1
+#' @param label.size label size, default 3
+#' @param label.category category to be used for dendrogram labels. default NULL
+#' @param nudge.label amount to nudge labels by. default 0.01
+#' @param expand.y expand y axis limit by percentage of ymax
+#' @param category for categorical data, default NULL
+#' @param id default 'sampleID'
+#' @export
 
 plot_ggdendro <- function(hcdata,
                           metadata,

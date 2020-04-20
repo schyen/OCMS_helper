@@ -18,6 +18,29 @@ plot_ggdendro(
   id = "sampleID"
 )
 }
+\arguments{
+\item{hcdata}{dendro object}
+
+\item{metadata}{dataframe with metdata}
+
+\item{direction}{direction of dendrogram}
+
+\item{fan}{spread dendrogram label as fan}
+
+\item{branch.size}{branch size, default 1}
+
+\item{label.size}{label size, default 3}
+
+\item{label.category}{category to be used for dendrogram labels. default NULL}
+
+\item{nudge.label}{amount to nudge labels by. default 0.01}
+
+\item{expand.y}{expand y axis limit by percentage of ymax}
+
+\item{category}{for categorical data, default NULL}
+
+\item{id}{default 'sampleID'}
+}
 \description{
 use ggplot to make customized dendrogram.
 following \link{https://atrebas.github.io/post/2019-06-08-lightweight-dendrograms/}

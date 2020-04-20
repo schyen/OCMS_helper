@@ -6,6 +6,13 @@
 \usage{
 set_labels_params(nbLabels, direction = c("tb", "bt", "lr", "rl"), fan = FALSE)
 }
+\arguments{
+\item{nbLabels}{number of labels}
+
+\item{direction}{label alignment (hjust and vjust). Must be one of "tb", "bt", "lr", "rl"}
+
+\item{fan}{logical. default FALSE. Should dendrogram labels be fanned out}
+}
 \description{
 set parameters of labels for plotting customized dendrogram.
 following \link{https://atrebas.github.io/post/2019-06-08-lightweight-dendrograms/}
