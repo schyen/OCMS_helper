@@ -6,6 +6,7 @@
 #' @param k number of clusters to cut dendrogram
 #' @return object \code{dendro} from ggdendro, with cluster assignments added
 #' @export
+#'
 dendro_data_k <- function(hc, k) {
 
   hcdata    <-  ggdendro::dendro_data(hc, type = "rectangle")
