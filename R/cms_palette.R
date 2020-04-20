@@ -5,8 +5,9 @@
 #' @param preview logic; default FALSE; when set, gives preview of colour
 #' @param palette character; allows you to specify a RColorBrewer palette by name
 #' @param full logic; default FALSE; when set, returns all 355 colours
-#' @import RColorBrewer
+#' @export
 #' @return vector of HEX colours, if full set to TRUE, gives all 335 colours, else gives n numbers
+
 
 cms_palette <- function(n = 1, preview = FALSE, palette = NULL, full = FALSE) {
 

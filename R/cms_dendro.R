@@ -6,7 +6,7 @@
 #' @param k number of clusters to cut dendrogram
 #' @return object \code{dendro} from ggdendro, with cluster assignments added
 #' @export
-#'
+
 dendro_data_k <- function(hc, k) {
 
   hcdata    <-  ggdendro::dendro_data(hc, type = "rectangle")
@@ -119,7 +119,7 @@ plot_ggdendro <- function(hcdata,
                  size         =  branch.size)
 
   # labels
-  labelParams <- OCMSExplorer:::set_labels_params(nrow(hcdata$labels), direction, fan)
+  labelParams <- Rhelper:::set_labels_params(nrow(hcdata$labels), direction, fan)
   hcdata$labels$angle <- labelParams$angle
 
   if(is.null(category)) {
