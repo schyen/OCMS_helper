@@ -1,4 +1,4 @@
-#' dendro_data_k
+#' dendro_cut_k
 #'
 #' Extract dendrogram data for plot customized dendrogram.
 #' following \link{https://atrebas.github.io/post/2019-06-08-lightweight-dendrograms/}
@@ -7,7 +7,7 @@
 #' @return object \code{dendro} from ggdendro, with cluster assignments added
 #' @export
 
-dendro_data_k <- function(hc, k) {
+dendro_cut_k <- function(hc, k) {
 
   hcdata    <-  ggdendro::dendro_data(hc, type = "rectangle")
   seg       <-  hcdata$segments
